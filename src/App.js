@@ -5,7 +5,7 @@ import Home from "./Home"
 import Create from "./Create";
 
 function App() {
-  return (
+  return (</*
     <Router>
       <div className="App">
         <Navbar />
@@ -16,7 +16,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+    </Router>*/ ><h2>Hello</h2></>
   );
 }
 
