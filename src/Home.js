@@ -1,22 +1,16 @@
-import { useState } from "react"
+import { useState, useEffect, useTransition } from "react"
+import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
 
-    const [blogs, setBlogs] = useState([
-        {title: "Dulce et Decorum Est", author:"Wilfred Owen", commentary:"Will come", id:1},
-        {title: "Alone", author: "Edgar Allan Poe", commentary:"Will come", id:2},
-        {title: "Going Blind", author: "Rainer Maria Rilke", commentary:"Will come", id:3}
-    ]);
+    const {data: blogs, isLoading, error} = useFetch("http://localhost:8000/blogs");
 
     return (
         <div className="home">
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}>
-                    <h2> {blog.title} </h2>
-                    <p>Written by {blog.author}</p>
-                </div>
-            )
-            )}
+            {error && <div>{error}</div>}
+            {isLoading && <div>Loading...</div>}
+            {blogs && <BlogList blogs = {blogs} title="My Blogs"/>}
         </div>
     );
 }
