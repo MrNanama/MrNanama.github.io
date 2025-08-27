@@ -4,7 +4,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <h1>Navigation Bar</h1>
+            <h1>Durukan's Website</h1>
             <div className="links">
                 <Link to="/">Home</Link>
                 <Link to="/create" style={{
