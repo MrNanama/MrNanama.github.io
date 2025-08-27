@@ -1,0 +1,7 @@
+{
+    "blogs":[
+        {"title": "Dulce et Decorum Est", "author":"Wilfred Owen", "commentary":"Will come", "id":1},
+        {"title": "Alone",  "author": "Edgar Allan Poe", "commentary":"Will come", "id":2},
+        {"title": "Going Blind", "author": "Rainer Maria Rilke", "commentary":"Will come", "id":3}
+    ]
+}
