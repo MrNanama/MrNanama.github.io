@@ -1,11 +1,10 @@
-import { useState, useEffect, useTransition } from "react"
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
 
     //const {data: blogs, isLoading, error} = useFetch("http://localhost:8000/blogs");
-    const {data: blogs, isLoading, error} = useFetch(process.env.PUBLIC_URL + '/db.json');
+    const {data: blogs, isLoading, error} = useFetch(process.env.PUBLIC_URL + '/db.json', (data)=>data.blogs);
 
     return (
         <div className="home">
